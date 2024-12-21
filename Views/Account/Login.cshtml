@@ -1,0 +1,18 @@
+﻿@model LoginViewModel
+
+
+<form method="post" class="border" style="padding : 10px ; width: 50% ; margin :auto" >
+    <div asp-validation-summary="ModelOnly"></div>
+<div class="mb-3">
+    <label asp-for="UserName" for="formGroupExampleInput" class="form-label">Employee Name</label>
+    <input type="text" asp-for="UserName" class="form-control" id="formGroupExampleInput" placeholder="enter employee name">
+    <span asp-validation-for="UserName"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Password" for="formGroupExampleInput2" class="form-label">Employee Password</label>
+    <input type="text" class="form-control" asp-for="Password" id="formGroupExampleInput2" placeholder="enter employee password">
+    <span asp-validation-for="Password"></span>
+</div>
+    <input type="submit" value="Login" class="btn btn-danger justify-content-center" />
+</form>
+

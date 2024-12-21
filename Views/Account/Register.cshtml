@@ -1,0 +1,25 @@
+﻿@model Employee
+
+<form method="post" class="border" style="padding : 10px ; width: 50% ; margin :auto">
+    <div class="mb-3">
+        <label asp-for="Name" for="formGroupExampleInput" class="form-label">Employee Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="formGroupExampleInput" placeholder="enter employee name">
+    </div>
+    <div class="mb-3">
+        <label asp-for="Password" for="formGroupExampleInput2" class="form-label">Employee Password</label>
+        <input type="text" class="form-control" asp-for="Password" id="formGroupExampleInput2" placeholder="enter employee password">
+    </div>
+    <div class="mb-3">
+        <label asp-for="DeptId" for="formGroupExampleInput3" class="form-label">Employee Department Id</label>
+        <select asp-for="DeptId" class="form-control" id="formGroupExampleInput3" asp-items="@ViewBag.departments">enter employee department...</select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Role" for="formGroupExampleInput4" class="form-label">Employee Department Id</label>
+        <select asp-for="Role" class="form-control" id="formGroupExampleInput4">
+            <option selected>enter employee role ...</option>
+            <option value="1">User</option>
+            <option value="2">Admin</option>
+        </select>
+    </div>
+    <input type="submit" value="Add new Employee" class="btn btn-danger" />
+</form>
